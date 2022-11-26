@@ -1,0 +1,16 @@
+
+add_paragraph_after 1
+add_line_after 1 0 *first line of the document
+
+add_line_after 1 1 *second line of the document
+   # let's print it
+
+append_line 1 * hallo testing yes haywerahewiu
+#remove_line 1 2
+replace_text "line" "TAR"
+highlight_text "TA"
+remove_text "doc"
+print_document
+load_file "doc1.txt"
+save_document TESTERONI
+quit

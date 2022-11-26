@@ -1,0 +1,3 @@
+load_file load1
+print_document
+quit
