@@ -1,0 +1,23 @@
+2023-05-14T17:22:21+00:00 rflite-HP-ProBook-455-G4#01 I: Start test public:0:nfa_accept.
+2023-05-14T17:22:21+00:00 rflite-HP-ProBook-455-G4#01 I: Test public:0:nfa_accept is successful.
+2023-05-14T17:22:21+00:00 rflite-HP-ProBook-455-G4#01 I: End test public:0:nfa_accept.
+2023-05-14T17:22:21+00:00 rflite-HP-ProBook-455-G4#01 I: Start test public:2:nfa_move.
+2023-05-14T17:22:21+00:00 rflite-HP-ProBook-455-G4#01 I: Test public:2:nfa_move is successful.
+2023-05-14T17:22:21+00:00 rflite-HP-ProBook-455-G4#01 I: End test public:2:nfa_move.
+2023-05-14T17:22:21+00:00 rflite-HP-ProBook-455-G4#01 I: Start test public:3:nfa_to_dfa.
+2023-05-14T17:22:21+00:00 rflite-HP-ProBook-455-G4#01 I: Test public:3:nfa_to_dfa is successful.
+2023-05-14T17:22:21+00:00 rflite-HP-ProBook-455-G4#01 I: End test public:3:nfa_to_dfa.
+2023-05-14T17:22:21+00:00 rflite-HP-ProBook-455-G4#01 I: Start test public:5:str_to_nfa.
+2023-05-14T17:22:21+00:00 rflite-HP-ProBook-455-G4#01 E: Test public:5:str_to_nfa has failed.
+2023-05-14T17:22:21+00:00 rflite-HP-ProBook-455-G4#01 E: NFA should not have accepted string 'a', but did in test public:5:str_to_nfa.
+2023-05-14T17:22:21+00:00 rflite-HP-ProBook-455-G4#01 E: Raised at OUnitAssert.assert_failure in file "src/lib/ounit2/advanced/oUnitAssert.ml", line 45, characters 2-27
+2023-05-14T17:22:21+00:00 rflite-HP-ProBook-455-G4#01 E: Called from Dune__exe__Public.test_str_to_nfa in file "test/public/public.ml", line 175, characters 2-24
+2023-05-14T17:22:21+00:00 rflite-HP-ProBook-455-G4#01 E: Called from OUnitRunner.run_one_test.(fun) in file "src/lib/ounit2/advanced/oUnitRunner.ml", line 83, characters 13-26
+2023-05-14T17:22:21+00:00 rflite-HP-ProBook-455-G4#01 E: 
+2023-05-14T17:22:21+00:00 rflite-HP-ProBook-455-G4#01 I: End test public:5:str_to_nfa.
+2023-05-14T17:22:21+00:00 rflite-HP-ProBook-455-G4#01 I: Start test public:7:nfa_new_trans.
+2023-05-14T17:22:21+00:00 rflite-HP-ProBook-455-G4#01 I: Test public:7:nfa_new_trans is successful.
+2023-05-14T17:22:21+00:00 rflite-HP-ProBook-455-G4#01 I: End test public:7:nfa_new_trans.
+2023-05-14T17:22:21+00:00 rflite-HP-ProBook-455-G4#01 I: Start test public:8:nfa_new_finals.
+2023-05-14T17:22:21+00:00 rflite-HP-ProBook-455-G4#01 I: Test public:8:nfa_new_finals is successful.
+2023-05-14T17:22:21+00:00 rflite-HP-ProBook-455-G4#01 I: End test public:8:nfa_new_finals.

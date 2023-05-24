@@ -1,0 +1,39 @@
+2023-05-02T02:00:33+00:00 rflite-HP-ProBook-455-G4#01 I: Start test public:0:public_nothing.
+2023-05-02T02:00:33+00:00 rflite-HP-ProBook-455-G4#01 I: Test public:0:public_nothing is successful.
+2023-05-02T02:00:33+00:00 rflite-HP-ProBook-455-G4#01 I: End test public:0:public_nothing.
+2023-05-02T02:00:33+00:00 rflite-HP-ProBook-455-G4#01 I: Start test public:9:public_expr_nested_let.
+2023-05-02T02:00:33+00:00 rflite-HP-ProBook-455-G4#01 I: Test public:9:public_expr_nested_let is successful.
+2023-05-02T02:00:33+00:00 rflite-HP-ProBook-455-G4#01 I: End test public:9:public_expr_nested_let.
+2023-05-02T02:00:33+00:00 rflite-HP-ProBook-455-G4#01 I: Start test public:11:public_expr_simple_concat.
+2023-05-02T02:00:33+00:00 rflite-HP-ProBook-455-G4#01 I: Test public:11:public_expr_simple_concat is successful.
+2023-05-02T02:00:33+00:00 rflite-HP-ProBook-455-G4#01 I: End test public:11:public_expr_simple_concat.
+2023-05-02T02:00:33+00:00 rflite-HP-ProBook-455-G4#01 I: Start test public:13:public_expr_simple_mult.
+2023-05-02T02:00:33+00:00 rflite-HP-ProBook-455-G4#01 I: Test public:13:public_expr_simple_mult is successful.
+2023-05-02T02:00:33+00:00 rflite-HP-ProBook-455-G4#01 I: End test public:13:public_expr_simple_mult.
+2023-05-02T02:00:33+00:00 rflite-HP-ProBook-455-G4#01 I: Start test public:15:public_expr_simple_sum.
+2023-05-02T02:00:33+00:00 rflite-HP-ProBook-455-G4#01 I: Test public:15:public_expr_simple_sum is successful.
+2023-05-02T02:00:33+00:00 rflite-HP-ProBook-455-G4#01 I: End test public:15:public_expr_simple_sum.
+2023-05-02T02:00:33+00:00 rflite-HP-ProBook-455-G4#01 I: Start test public:17:public_expr_single_bool.
+2023-05-02T02:00:33+00:00 rflite-HP-ProBook-455-G4#01 I: Test public:17:public_expr_single_bool is successful.
+2023-05-02T02:00:33+00:00 rflite-HP-ProBook-455-G4#01 I: End test public:17:public_expr_single_bool.
+2023-05-02T02:00:33+00:00 rflite-HP-ProBook-455-G4#01 I: Start test public:19:public_expr_single_if.
+2023-05-02T02:00:33+00:00 rflite-HP-ProBook-455-G4#01 I: Test public:19:public_expr_single_if is successful.
+2023-05-02T02:00:33+00:00 rflite-HP-ProBook-455-G4#01 I: End test public:19:public_expr_single_if.
+2023-05-02T02:00:33+00:00 rflite-HP-ProBook-455-G4#01 I: Start test public:21:public_expr_single_notequal.
+2023-05-02T02:00:33+00:00 rflite-HP-ProBook-455-G4#01 I: Test public:21:public_expr_single_notequal is successful.
+2023-05-02T02:00:33+00:00 rflite-HP-ProBook-455-G4#01 I: End test public:21:public_expr_single_notequal.
+2023-05-02T02:00:33+00:00 rflite-HP-ProBook-455-G4#01 I: Start test public:24:public_expr_single_or.
+2023-05-02T02:00:33+00:00 rflite-HP-ProBook-455-G4#01 I: Test public:24:public_expr_single_or is successful.
+2023-05-02T02:00:33+00:00 rflite-HP-ProBook-455-G4#01 I: End test public:24:public_expr_single_or.
+2023-05-02T02:00:33+00:00 rflite-HP-ProBook-455-G4#01 I: Start test public:26:public_err_div_by_zero.
+2023-05-02T02:00:33+00:00 rflite-HP-ProBook-455-G4#01 I: Test public:26:public_err_div_by_zero is successful.
+2023-05-02T02:00:33+00:00 rflite-HP-ProBook-455-G4#01 I: End test public:26:public_err_div_by_zero.
+2023-05-02T02:00:33+00:00 rflite-HP-ProBook-455-G4#01 I: Start test public:28:public_mutop_nonempty_env.
+2023-05-02T02:00:33+00:00 rflite-HP-ProBook-455-G4#01 E: Test public:28:public_mutop_nonempty_env exited with an error.
+2023-05-02T02:00:33+00:00 rflite-HP-ProBook-455-G4#01 E: P4b.Eval.TypeError("invalid input") in test public:28:public_mutop_nonempty_env.
+2023-05-02T02:00:33+00:00 rflite-HP-ProBook-455-G4#01 E: Raised at P4b__Eval.eval_mutop in file "src/eval.ml", line 199, characters 7-41
+2023-05-02T02:00:33+00:00 rflite-HP-ProBook-455-G4#01 E: Called from TestUtils.eval_mutop_ast in file "test/testUtils.ml" (inlined), line 32, characters 29-45
+2023-05-02T02:00:33+00:00 rflite-HP-ProBook-455-G4#01 E: Called from Dune__exe__Public.public_mutop_nonempty_env in file "test/public/public.ml", line 214, characters 16-89
+2023-05-02T02:00:33+00:00 rflite-HP-ProBook-455-G4#01 E: Called from OUnitRunner.run_one_test.(fun) in file "src/lib/ounit2/advanced/oUnitRunner.ml", line 83, characters 13-26
+2023-05-02T02:00:33+00:00 rflite-HP-ProBook-455-G4#01 E: 
+2023-05-02T02:00:33+00:00 rflite-HP-ProBook-455-G4#01 I: End test public:28:public_mutop_nonempty_env.

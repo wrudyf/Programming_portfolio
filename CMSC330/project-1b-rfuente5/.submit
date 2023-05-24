@@ -1,0 +1,10 @@
+[course]
+id = 489995
+name = "CMSC330"
+term = "Spring 2023"
+
+[assignment]
+id = 2639851
+name = "Project 1b"
+files = [ "src/translate.rb" ]
+

@@ -1,0 +1,4 @@
+let eval_mutop env m = 
+match m with 
+| NoOp -> (env, None)
+| _ -> raise (TypeError("invalid input"))

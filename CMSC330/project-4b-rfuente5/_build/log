@@ -1,0 +1,331 @@
+# dune runtest -f
+# OCAMLPARAM: unset
+# Shared cache: disabled
+# Workspace root: /home/rflite/cmsc330/project-4b-rfuente5
+# Auto-detected concurrency: 2
+$ /usr/bin/ocamlc.opt -config > /tmp/dune_c4e5fb_output
+# Dune context:
+#  { name = "default"
+#  ; kind = "default"
+#  ; profile = Release
+#  ; merlin = true
+#  ; for_host = None
+#  ; fdo_target_exe = None
+#  ; build_dir = In_build_dir "default"
+#  ; toplevel_path = Some External "/home/rflite/.opam/default/lib/toplevel"
+#  ; ocaml_bin = External "/usr/bin"
+#  ; ocaml = Ok External "/home/rflite/.opam/default/bin/ocaml"
+#  ; ocamlc = External "/usr/bin/ocamlc.opt"
+#  ; ocamlopt = Ok External "/usr/bin/ocamlopt.opt"
+#  ; ocamldep = Ok External "/usr/bin/ocamldep.opt"
+#  ; ocamlmklib = Ok External "/usr/bin/ocamlmklib.opt"
+#  ; env =
+#      map
+#        { "DUNE_OCAML_HARDCODED" : "/home/rflite/.opam/default/lib"
+#        ; "DUNE_OCAML_STDLIB" : "/usr/lib/ocaml"
+#        ; "DUNE_SOURCEROOT" : "/home/rflite/cmsc330/project-4b-rfuente5"
+#        ; "INSIDE_DUNE" :
+#            "/home/rflite/cmsc330/project-4b-rfuente5/_build/default"
+#        ; "OCAMLFIND_IGNORE_DUPS_IN" :
+#            "/home/rflite/cmsc330/project-4b-rfuente5/_build/install/default/lib"
+#        ; "OCAMLPATH" :
+#            "/home/rflite/cmsc330/project-4b-rfuente5/_build/install/default/lib"
+#        ; "OCAMLTOP_INCLUDE_PATH" :
+#            "/home/rflite/cmsc330/project-4b-rfuente5/_build/install/default/lib/toplevel"
+#        ; "OCAML_COLOR" : "always"
+#        ; "OPAMCOLOR" : "always"
+#        }
+#  ; findlib_paths = [ External "/home/rflite/.opam/default/lib" ]
+#  ; arch_sixtyfour = true
+#  ; natdynlink_supported = true
+#  ; supports_shared_libraries = true
+#  ; ocaml_config =
+#      { version = "4.13.1"
+#      ; standard_library_default = "/usr/lib/ocaml"
+#      ; standard_library = "/usr/lib/ocaml"
+#      ; standard_runtime = "the_standard_runtime_variable_was_deleted"
+#      ; ccomp_type = "cc"
+#      ; c_compiler = "x86_64-linux-gnu-gcc"
+#      ; ocamlc_cflags =
+#          [ "-O2"
+#          ; "-fno-strict-aliasing"
+#          ; "-fwrapv"
+#          ; "-pthread"
+#          ; "-fPIC"
+#          ; "-g"
+#          ; "-O2"
+#          ; "-ffile-prefix-map=/build/ocaml-SC7b9w/ocaml-4.13.1=."
+#          ; "-fstack-protector-strong"
+#          ; "-Wformat"
+#          ; "-Werror=format-security"
+#          ]
+#      ; ocamlc_cppflags =
+#          [ "-D_FILE_OFFSET_BITS=64"; "-Wdate-time"; "-D_FORTIFY_SOURCE=2" ]
+#      ; ocamlopt_cflags =
+#          [ "-O2"
+#          ; "-fno-strict-aliasing"
+#          ; "-fwrapv"
+#          ; "-pthread"
+#          ; "-fPIC"
+#          ; "-g"
+#          ; "-O2"
+#          ; "-ffile-prefix-map=/build/ocaml-SC7b9w/ocaml-4.13.1=."
+#          ; "-fstack-protector-strong"
+#          ; "-Wformat"
+#          ; "-Werror=format-security"
+#          ]
+#      ; ocamlopt_cppflags =
+#          [ "-D_FILE_OFFSET_BITS=64"; "-Wdate-time"; "-D_FORTIFY_SOURCE=2" ]
+#      ; bytecomp_c_compiler =
+#          [ "x86_64-linux-gnu-gcc"
+#          ; "-O2"
+#          ; "-fno-strict-aliasing"
+#          ; "-fwrapv"
+#          ; "-pthread"
+#          ; "-fPIC"
+#          ; "-g"
+#          ; "-O2"
+#          ; "-ffile-prefix-map=/build/ocaml-SC7b9w/ocaml-4.13.1=."
+#          ; "-fstack-protector-strong"
+#          ; "-Wformat"
+#          ; "-Werror=format-security"
+#          ; "-D_FILE_OFFSET_BITS=64"
+#          ; "-Wdate-time"
+#          ; "-D_FORTIFY_SOURCE=2"
+#          ]
+#      ; bytecomp_c_libraries = [ "-lm"; "-lpthread" ]
+#      ; native_c_compiler =
+#          [ "x86_64-linux-gnu-gcc"
+#          ; "-O2"
+#          ; "-fno-strict-aliasing"
+#          ; "-fwrapv"
+#          ; "-pthread"
+#          ; "-fPIC"
+#          ; "-g"
+#          ; "-O2"
+#          ; "-ffile-prefix-map=/build/ocaml-SC7b9w/ocaml-4.13.1=."
+#          ; "-fstack-protector-strong"
+#          ; "-Wformat"
+#          ; "-Werror=format-security"
+#          ; "-D_FILE_OFFSET_BITS=64"
+#          ; "-Wdate-time"
+#          ; "-D_FORTIFY_SOURCE=2"
+#          ]
+#      ; native_c_libraries = [ "-lm" ]
+#      ; native_pack_linker = [ "x86_64-linux-gnu-ld"; "-r"; "-o" ]
+#      ; cc_profile = []
+#      ; architecture = "amd64"
+#      ; model = "default"
+#      ; int_size = 63
+#      ; word_size = 64
+#      ; system = "linux"
+#      ; asm = [ "x86_64-linux-gnu-as" ]
+#      ; asm_cfi_supported = true
+#      ; with_frame_pointers = false
+#      ; ext_exe = ""
+#      ; ext_obj = ".o"
+#      ; ext_asm = ".s"
+#      ; ext_lib = ".a"
+#      ; ext_dll = ".so"
+#      ; os_type = "Unix"
+#      ; default_executable_name = "a.out"
+#      ; systhread_supported = true
+#      ; host = "x86_64-pc-linux-gnu"
+#      ; target = "x86_64-pc-linux-gnu"
+#      ; profiling = false
+#      ; flambda = false
+#      ; spacetime = false
+#      ; safe_string = true
+#      ; exec_magic_number = "Caml1999X030"
+#      ; cmi_magic_number = "Caml1999I030"
+#      ; cmo_magic_number = "Caml1999O030"
+#      ; cma_magic_number = "Caml1999A030"
+#      ; cmx_magic_number = "Caml1999Y030"
+#      ; cmxa_magic_number = "Caml1999Z030"
+#      ; ast_impl_magic_number = "Caml1999M030"
+#      ; ast_intf_magic_number = "Caml1999N030"
+#      ; cmxs_magic_number = "Caml1999D030"
+#      ; cmt_magic_number = "Caml1999T030"
+#      ; natdynlink_supported = true
+#      ; supports_shared_libraries = true
+#      ; windows_unicode = false
+#      }
+#  }
+$ (cd _build/default && /usr/bin/ocamldep.opt -modules -impl src/eval.ml) > _build/default/src/.p4b.objs/p4b__Eval.impl.d
+$ (cd _build/default && /usr/bin/ocamlopt.opt -w -40 -g -I src/.p4b.objs/byte -I src/.p4b.objs/native -intf-suffix .ml -no-alias-deps -open P4b -o src/.p4b.objs/native/p4b__Eval.cmx -c -impl src/eval.ml)
+$ (cd _build/default && /usr/bin/ocamlopt.opt -w -40 -g -a -o src/p4b.cmxa src/.p4b.objs/native/p4b.cmx src/.p4b.objs/native/p4b__MicroCamlTypes.cmx src/.p4b.objs/native/p4b__TokenTypes.cmx src/.p4b.objs/native/p4b__Utils.cmx src/.p4b.objs/native/p4b__Parser.cmx src/.p4b.objs/native/p4b__Lexer.cmx src/.p4b.objs/native/p4b__Eval.cmx)
+$ (cd _build/default && /usr/bin/ocamlopt.opt -w -40 -g -I test/.testUtils.objs/byte -I test/.testUtils.objs/native -I /home/rflite/.opam/default/lib/oUnit -I /home/rflite/.opam/default/lib/ounit2 -I /home/rflite/.opam/default/lib/ounit2/advanced -I /home/rflite/.opam/default/lib/seq -I /home/rflite/.opam/default/lib/stdlib-shims -I src/.p4b.objs/byte -I src/.p4b.objs/native -intf-suffix .ml -no-alias-deps -o test/.testUtils.objs/native/testUtils.cmx -c -impl test/testUtils.ml)
+$ (cd _build/default && /usr/bin/ocamlopt.opt -w -40 -g -a -o test/testUtils.cmxa test/.testUtils.objs/native/testUtils.cmx)
+$ (cd _build/default && /usr/bin/ocamlopt.opt -w -40 -g -I test/public/.public.eobjs/byte -I test/public/.public.eobjs/native -I /home/rflite/.opam/default/lib/oUnit -I /home/rflite/.opam/default/lib/ounit2 -I /home/rflite/.opam/default/lib/ounit2/advanced -I /home/rflite/.opam/default/lib/seq -I /home/rflite/.opam/default/lib/stdlib-shims -I src/.p4b.objs/byte -I src/.p4b.objs/native -I test/.testUtils.objs/byte -I test/.testUtils.objs/native -intf-suffix .ml -no-alias-deps -o test/public/.public.eobjs/native/dune__exe__Public.cmx -c -impl test/public/public.ml)
+$ (cd _build/default && /usr/bin/ocamlopt.opt -w -40 -g -I test/pbt/.pbt.eobjs/byte -I test/pbt/.pbt.eobjs/native -I /home/rflite/.opam/default/lib/oUnit -I /home/rflite/.opam/default/lib/ounit2 -I /home/rflite/.opam/default/lib/ounit2/advanced -I /home/rflite/.opam/default/lib/qcheck -I /home/rflite/.opam/default/lib/qcheck-core -I /home/rflite/.opam/default/lib/qcheck-core/runner -I /home/rflite/.opam/default/lib/qcheck-ounit -I /home/rflite/.opam/default/lib/seq -I /home/rflite/.opam/default/lib/stdlib-shims -I src/.p4b.objs/byte -I src/.p4b.objs/native -I test/.testUtils.objs/byte -I test/.testUtils.objs/native -intf-suffix .ml -no-alias-deps -o test/pbt/.pbt.eobjs/native/dune__exe__Pbt.cmx -c -impl test/pbt/pbt.ml)
+$ (cd _build/default && /usr/bin/ocamlopt.opt -w -40 -g -o test/public/public.exe /usr/lib/ocaml/str.cmxa -I /usr/lib/ocaml src/p4b.cmxa /usr/lib/ocaml/unix.cmxa -I /usr/lib/ocaml -I /usr/lib/ocaml /home/rflite/.opam/default/lib/stdlib-shims/stdlib_shims.cmxa /home/rflite/.opam/default/lib/ounit2/advanced/oUnitAdvanced.cmxa /home/rflite/.opam/default/lib/ounit2/oUnit.cmxa test/testUtils.cmxa test/public/.public.eobjs/native/dune__exe__Public.cmx)
+$ (cd _build/default && /usr/bin/ocamlopt.opt -w -40 -g -o test/pbt/pbt.exe /usr/lib/ocaml/str.cmxa -I /usr/lib/ocaml src/p4b.cmxa /usr/lib/ocaml/unix.cmxa -I /usr/lib/ocaml -I /usr/lib/ocaml /home/rflite/.opam/default/lib/stdlib-shims/stdlib_shims.cmxa /home/rflite/.opam/default/lib/ounit2/advanced/oUnitAdvanced.cmxa /home/rflite/.opam/default/lib/ounit2/oUnit.cmxa /home/rflite/.opam/default/lib/qcheck-core/qcheck_core.cmxa /home/rflite/.opam/default/lib/qcheck-core/runner/qcheck_runner.cmxa /home/rflite/.opam/default/lib/qcheck-ounit/qcheck_ounit.cmxa /home/rflite/.opam/default/lib/qcheck/qcheck.cmxa test/testUtils.cmxa test/pbt/.pbt.eobjs/native/dune__exe__Pbt.cmx)
+$ (cd _build/default/test/public && ./public.exe)
+> EEEEE..E..........E..E.....EEF
+> ==============================================================================
+> Error: public:28:public_mutop_nonempty_env.
+>
+> File "/home/rflite/cmsc330/project-4b-rfuente5/_build/default/test/public/oUnit-public-rflite-HP-ProBook-455-G4#01.log", line 32, characters 1-1:
+> Error: public:28:public_mutop_nonempty_env (in the log).
+>
+> Raised at P4b__Eval.eval_mutop in file "src/eval.ml", line 199, characters 7-41
+> Called from TestUtils.eval_mutop_ast in file "test/testUtils.ml" (inlined), line 32, characters 29-45
+> Called from Dune__exe__Public.public_mutop_nonempty_env in file "test/public/public.ml", line 214, characters 16-89
+> Called from OUnitRunner.run_one_test.(fun) in file "src/lib/ounit2/advanced/oUnitRunner.ml", line 83, characters 13-26
+>
+> P4b.Eval.TypeError("invalid input")
+> ------------------------------------------------------------------------------
+> ==============================================================================
+> Error: public:27:public_mutop_factorial.
+>
+> File "/home/rflite/cmsc330/project-4b-rfuente5/_build/default/test/public/oUnit-public-rflite-HP-ProBook-455-G4#02.log", line 103, characters 1-1:
+> Error: public:27:public_mutop_factorial (in the log).
+>
+> Raised at P4b__Eval.eval_mutop in file "src/eval.ml", line 199, characters 7-41
+> Called from TestUtils.eval_mutop_ast in file "test/testUtils.ml" (inlined), line 32, characters 29-45
+> Called from Dune__exe__Public.public_mutop_factorial in file "test/public/public.ml", line 205, characters 16-37
+> Called from OUnitRunner.run_one_test.(fun) in file "src/lib/ounit2/advanced/oUnitRunner.ml", line 83, characters 13-26
+>
+> P4b.Eval.TypeError("invalid input")
+> ------------------------------------------------------------------------------
+> ==============================================================================
+> Error: public:22:public_expr_single_not.
+>
+> File "/home/rflite/cmsc330/project-4b-rfuente5/_build/default/test/public/oUnit-public-rflite-HP-ProBook-455-G4#02.log", line 88, characters 1-1:
+> Error: public:22:public_expr_single_not (in the log).
+>
+> Raised at P4b__Eval.eval_expr in file "src/eval.ml", line 188, characters 7-41
+> Called from TestUtils.eval_expr_ast in file "test/testUtils.ml" (inlined), line 29, characters 29-44
+> Called from Dune__exe__Public.public_expr_single_not in file "test/public/public.ml", line 173, characters 16-36
+> Called from OUnitRunner.run_one_test.(fun) in file "src/lib/ounit2/advanced/oUnitRunner.ml", line 83, characters 13-26
+>
+> P4b.Eval.TypeError("invalid input")
+> ------------------------------------------------------------------------------
+> ==============================================================================
+> Error: public:18:public_expr_single_fun.
+>
+> File "/home/rflite/cmsc330/project-4b-rfuente5/_build/default/test/public/oUnit-public-rflite-HP-ProBook-455-G4#02.log", line 76, characters 1-1:
+> Error: public:18:public_expr_single_fun (in the log).
+>
+> Raised at P4b__Eval.ref_lookup in file "src/eval.ml", line 26, characters 10-56
+> Called from TestUtils.eval_expr_ast in file "test/testUtils.ml" (inlined), line 29, characters 29-44
+> Called from Dune__exe__Public.public_expr_single_fun in file "test/public/public.ml", line 148, characters 16-36
+> Called from OUnitRunner.run_one_test.(fun) in file "src/lib/ounit2/advanced/oUnitRunner.ml", line 83, characters 13-26
+>
+> P4b.Eval.DeclareError("Unbound variable x")
+> ------------------------------------------------------------------------------
+> ==============================================================================
+> Error: public:7:public_expr_let_fun.
+>
+> File "/home/rflite/cmsc330/project-4b-rfuente5/_build/default/test/public/oUnit-public-rflite-HP-ProBook-455-G4#02.log", line 52, characters 1-1:
+> Error: public:7:public_expr_let_fun (in the log).
+>
+> Raised at P4b__Eval.ref_lookup in file "src/eval.ml", line 26, characters 10-56
+> Called from TestUtils.eval_expr_ast in file "test/testUtils.ml" (inlined), line 29, characters 29-44
+> Called from Dune__exe__Public.public_expr_let_fun in file "test/public/public.ml", line 64, characters 16-36
+> Called from OUnitRunner.run_one_test.(fun) in file "src/lib/ounit2/advanced/oUnitRunner.ml", line 83, characters 13-26
+>
+> P4b.Eval.DeclareError("Unbound variable a")
+> ------------------------------------------------------------------------------
+> ==============================================================================
+> Error: public:5:public_expr_double_fun.
+>
+> File "/home/rflite/cmsc330/project-4b-rfuente5/_build/default/test/public/oUnit-public-rflite-HP-ProBook-455-G4#02.log", line 39, characters 1-1:
+> Error: public:5:public_expr_double_fun (in the log).
+>
+> Raised at P4b__Eval.ref_lookup in file "src/eval.ml", line 26, characters 10-56
+> Called from P4b__Eval.eval_expr in file "src/eval.ml", line 178, characters 15-31
+> Called from TestUtils.eval_expr_ast in file "test/testUtils.ml" (inlined), line 29, characters 29-44
+> Called from Dune__exe__Public.public_expr_double_fun in file "test/public/public.ml", line 47, characters 16-36
+> Called from OUnitRunner.run_one_test.(fun) in file "src/lib/ounit2/advanced/oUnitRunner.ml", line 83, characters 13-26
+>
+> P4b.Eval.DeclareError("Unbound variable x")
+> ------------------------------------------------------------------------------
+> ==============================================================================
+> Error: public:4:public_expr_apply.
+>
+> File "/home/rflite/cmsc330/project-4b-rfuente5/_build/default/test/public/oUnit-public-rflite-HP-ProBook-455-G4#02.log", line 29, characters 1-1:
+> Error: public:4:public_expr_apply (in the log).
+>
+> Raised at P4b__Eval.ref_lookup in file "src/eval.ml", line 26, characters 10-56
+> Called from P4b__Eval.eval_expr in file "src/eval.ml", line 178, characters 15-31
+> Called from TestUtils.eval_expr_ast in file "test/testUtils.ml" (inlined), line 29, characters 29-44
+> Called from Dune__exe__Public.public_expr_apply in file "test/public/public.ml", line 37, characters 17-37
+> Called from OUnitRunner.run_one_test.(fun) in file "src/lib/ounit2/advanced/oUnitRunner.ml", line 83, characters 13-26
+>
+> P4b.Eval.DeclareError("Unbound variable x")
+> ------------------------------------------------------------------------------
+> ==============================================================================
+> Error: public:3:public_expr_add1.
+>
+> File "/home/rflite/cmsc330/project-4b-rfuente5/_build/default/test/public/oUnit-public-rflite-HP-ProBook-455-G4#02.log", line 20, characters 1-1:
+> Error: public:3:public_expr_add1 (in the log).
+>
+> Raised at P4b__Eval.ref_lookup in file "src/eval.ml", line 26, characters 10-56
+> Called from TestUtils.eval_expr_ast in file "test/testUtils.ml" (inlined), line 29, characters 29-44
+> Called from Dune__exe__Public.public_expr_add1 in file "test/public/public.ml", line 29, characters 16-36
+> Called from OUnitRunner.run_one_test.(fun) in file "src/lib/ounit2/advanced/oUnitRunner.ml", line 83, characters 13-26
+>
+> P4b.Eval.DeclareError("Unbound variable x")
+> ------------------------------------------------------------------------------
+> ==============================================================================
+> Error: public:2:public_mutop_simple_def_and_let.
+>
+> File "/home/rflite/cmsc330/project-4b-rfuente5/_build/default/test/public/oUnit-public-rflite-HP-ProBook-455-G4#02.log", line 11, characters 1-1:
+> Error: public:2:public_mutop_simple_def_and_let (in the log).
+>
+> Raised at P4b__Eval.eval_mutop in file "src/eval.ml", line 199, characters 7-41
+> Called from TestUtils.eval_mutop_ast in file "test/testUtils.ml" (inlined), line 32, characters 29-45
+> Called from Dune__exe__Public.public_mutop_simple_def_and_let in file "test/public/public.ml", line 21, characters 16-37
+> Called from OUnitRunner.run_one_test.(fun) in file "src/lib/ounit2/advanced/oUnitRunner.ml", line 83, characters 13-26
+>
+> P4b.Eval.TypeError("invalid input")
+> ------------------------------------------------------------------------------
+> ==============================================================================
+> Error: public:1:public_mutop_pi_def.
+>
+> File "/home/rflite/cmsc330/project-4b-rfuente5/_build/default/test/public/oUnit-public-rflite-HP-ProBook-455-G4#02.log", line 2, characters 1-1:
+> Error: public:1:public_mutop_pi_def (in the log).
+>
+> Raised at P4b__Eval.eval_mutop in file "src/eval.ml", line 199, characters 7-41
+> Called from TestUtils.eval_mutop_ast in file "test/testUtils.ml" (inlined), line 32, characters 29-45
+> Called from Dune__exe__Public.public_mutop_pi_def in file "test/public/public.ml", line 14, characters 16-37
+> Called from OUnitRunner.run_one_test.(fun) in file "src/lib/ounit2/advanced/oUnitRunner.ml", line 83, characters 13-26
+>
+> P4b.Eval.TypeError("invalid input")
+> ------------------------------------------------------------------------------
+> ==============================================================================
+> Error: public:29:public_expr_shadow.
+>
+> File "/home/rflite/cmsc330/project-4b-rfuente5/_build/default/test/public/oUnit-public-rflite-HP-ProBook-455-G4#02.log", line 112, characters 1-1:
+> Error: public:29:public_expr_shadow (in the log).
+>
+> Raised at OUnitAssert.assert_failure in file "src/lib/ounit2/advanced/oUnitAssert.ml", line 45, characters 2-27
+> Called from OUnitRunner.run_one_test.(fun) in file "src/lib/ounit2/advanced/oUnitRunner.ml", line 83, characters 13-26
+>
+> public_expr_shadow
+> not equal
+> ------------------------------------------------------------------------------
+> Ran: 30 tests in: 0.13 seconds.
+> FAILED: Cases: 30 Tried: 30 Errors: 10 Failures: 1 Skip:  0 Todo: 0 Timeouts: 0.
+[1]
+$ (cd _build/default/test/pbt && ./pbt.exe)
+> ..F.
+> ==============================================================================
+> Error: pbt:3:test_operator_precedence.
+>
+> File "/home/rflite/cmsc330/project-4b-rfuente5/_build/default/test/pbt/oUnit-pbt-rflite-HP-ProBook-455-G4#01.log", line 17, characters 1-1:
+> Error: pbt:3:test_operator_precedence (in the log).
+>
+> File "src/core/QCheck2.ml", line 1843, characters 1-1:
+> Error: pbt:3:test_operator_precedence (in the code).
+>
+>
+> test `test_operator_precedence` failed on ≥ 1 cases:
+> (0, 0, 0) (after 8 shrink steps)
+>
+>
+> ------------------------------------------------------------------------------
+> Ran: 4 tests in: 1.33 seconds.
+> FAILED: Cases: 4 Tried: 4 Errors: 0 Failures: 1 Skip:  0 Todo: 0 Timeouts: 0.
+[1]

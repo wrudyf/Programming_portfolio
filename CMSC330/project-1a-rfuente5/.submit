@@ -1,0 +1,10 @@
+[course]
+id = 489995
+name = "CMSC330"
+term = "Spring 2023"
+
+[assignment]
+id = 2617337
+name = "Project 1a"
+files = [ "src/warmup.rb", "src/roster.rb" ]
+
