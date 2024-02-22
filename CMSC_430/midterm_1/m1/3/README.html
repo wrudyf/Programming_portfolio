@@ -1,0 +1,35 @@
+<h1 id="cmsc-430-midterm-1-part-3">CMSC 430 Midterm 1, Part 3</h1>
+<h2 id="instructions">Instructions</h2>
+<p>You’ve been provided an implementation of Evildoer as presented in
+class.</p>
+<p>Your job is to implement two new expression forms:</p>
+<ul>
+<li><code>(when e1 e2)</code></li>
+<li><code>(unless e1 e2)</code></li>
+</ul>
+<p>The expressions evaluate as follows:</p>
+<ul>
+<li><p><code>(when e1 e2)</code> evaluates <code>e1</code>.</p>
+<ul>
+<li><p>If <code>e1</code>’s value is true, i.e. any value other than
+<code>#f</code>, then <code>e2</code> is evaluated and its value is the
+value of the entire <code>when</code> expression.</p></li>
+<li><p>If <code>e1</code>’s value is <code>#f</code>, then
+<code>e2</code> is <em>not</em> evaluated and the entire
+<code>when</code> expression evaluates to the void value.</p></li>
+</ul></li>
+<li><p><code>(unless e1 e2)</code> evaluates <code>e1</code>.</p>
+<ul>
+<li><p>If <code>e1</code>’s value is true, i.e. any value other than
+<code>#f</code>, then <code>e2</code> is not evaluated and the entire
+<code>unless</code> expression evaluates to the void value.</p></li>
+<li><p>If <code>e1</code>’s value is <code>#f</code>, then
+<code>e2</code> is evaluated and its value is the value of the entire
+<code>unless</code> expression.</p></li>
+</ul></li>
+</ul>
+<p>The AST type definition, parser, and interpreter have been updated to
+implement these new forms, and a stub has been added to the compiler.
+You must finish the implementation in the compiler.</p>
+<p>Note: there are only a few <code>when</code> and <code>unless</code>
+tests included, so you consider writing some of your own.</p>

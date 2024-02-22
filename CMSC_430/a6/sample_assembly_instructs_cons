@@ -1,0 +1,22 @@
+(compile-e (parse-e '(cons 5 (cons 10 11))) '())
+
+(list
+ (Mov 'rax 80)                      ;;5
+ (Push 'rax)                        ;;put 5 on stack
+ (Mov 'rax 160)                     ;;10
+ (Push 'rax)                        ;;put 10 on stack
+ (Mov 'rax 176)                     ;;11
+
+ (Mov (Offset 'rbx 0) 'rax)         ;;put 11 into rbx (heap)
+ (Pop 'rax)                         ;;pop 10 off stack and put in rax
+ (Mov (Offset 'rbx 8) 'rax)         ;;put 10 into rbx (heap)
+ (Mov 'rax 'rbx)                    ;;move rbx addr into rax
+ (Or 'rax 2)                        ;;tag as a cons
+ (Add 'rbx 16)                      ;;move to next available spot in heap since cons is 16 (8 for elem and 8 for pointer to next elem
+
+ (Mov (Offset 'rbx 0) 'rax)         ;;move pointer from rax into heap
+ (Pop 'rax)                         ;;pop 11 off stack and put in rax
+ (Mov (Offset 'rbx 8) 'rax)         ;;move 11 into the next part of the heap
+ (Mov 'rax 'rbx)                    ;;Move the pointer in rbx into rax
+ (Or 'rax 2)                        ;;tag rax as a cons
+ (Add 'rbx 16))                     ;;then add 16 to rbx so you're in the next spot in heap

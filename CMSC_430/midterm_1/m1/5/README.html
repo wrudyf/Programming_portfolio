@@ -1,0 +1,35 @@
+<h1 id="cmsc-430-midterm-1-part-5">CMSC 430 Midterm 1, Part 5</h1>
+<h2 id="instructions">Instructions</h2>
+<p>You’ve been provided a modified implementation of Evildoer as
+presented in class; in additional to the usual Evildoer features, it
+includes an <code>and</code> form which works just like Racket’s.</p>
+<p>The <code>and</code> form can take any number of subexpressions and
+it evaluates them from left to right. Should any subexpression produce
+<code>#f</code>, the <code>and</code> expression produces
+<code>#f</code> and subsequent subexpressions are not evaluated. If none
+of the subexpressions produce <code>#f</code>, then all of the
+subexpressions are evaluated and the <code>and</code> expression
+produces the value of the last expression (or <code>#t</code> if there
+is none).</p>
+<p>It’s important to note that <code>and</code> is “short-circuiting”;
+if any subexpression produces <code>#f</code>, then subsequent
+subexpressions are not evaluated.</p>
+<p>Here are some examples:</p>
+<pre><code>&gt; (and)
+#t
+&gt; (and 8)
+8
+&gt; (and #t 8 1)
+1
+&gt; (and 8 #f (write-byte 97))
+#f</code></pre>
+<p>The implementation you are given has already added <code>and</code>
+to the AST, parser, and interpreter, and a stub has been added to the
+compiler for handling <code>and</code>. You simply have to complete the
+implementation in the compiler.</p>
+<p>Note: there are <em>some</em> tests for <code>and</code> included,
+but you should consider adding more of your own.</p>
+<p>Another note: the fact that this is Evildoer is not terribly
+relevant. You could do this for Dupe and the solution would be the same.
+The reason Evildoer is used is so that we observe the short-circuiting
+as shown in the last example.</p>

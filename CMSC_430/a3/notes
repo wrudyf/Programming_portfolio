@@ -1,0 +1,5 @@
+understanding so far of cond and case
+
+cond: for conds, the last else is evaluated, the first true expression is evaluted and everything after is ignored
+
+case: for cases, if you have a match, then racket displays proper case that match. if no case matches nothing is displayed. if you have 2 cases that match though, then the first is displayed and the rest of the other cases are ignored

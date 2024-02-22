@@ -1,0 +1,138 @@
+code for fact
+(define (fact x)
+(match x
+[ 0 1]
+[ _ (* x (fact (- x 1)))]))
+
+code for fib
+(define (fib y)
+  (match y
+  [ -2 1]
+  [ -1 1]
+  [ 0 0]
+  [ 1 1]
+  [ _ (+ (fib (- y 1)) (fib (- y 2))) ]))
+
+  code for longer
+  (define (longer x y)
+  (if (e) (t) (f))
+  )
+
+  (define (longer x y)
+  (if (< (string-length x) (string-length y)) y x )
+  )
+
+  code for explode
+  (define (explode s)
+  (match s
+  ["" '()]
+  [ _ (cons (substring s 0 1) (explode (substring s 1)) )]))
+
+  foldl (anonymous func) (accumulator) (input)
+  ex: (foldl (lambda (elem v) (+ v elem)) 5 '(1 2 3))
+                                accumulator is 5, input is list '(1 2 3)
+
+idea for explode function:
+do tail recursive function that appends first char (0 1) index to our string s_arr and then
+call self with first char popped off string, match on string being length 0
+
+  code for bigram
+  (define (bigram s)
+  (match (string-length s)
+  [0 '()]
+  [1 '()]
+  [_ (cons (list (substring s 0 1) (substring s 1 2))  (bigram (substring s 1)))]))
+
+  code for length-l <---length-lon
+    (define (length-l ls)
+    (match ls
+    [ '() 0]
+    [ _ (+ (length-l (rest ls)) 1)]))
+
+  code for sum
+    (define (sum ls)
+    (match ls
+    [ '() 0]
+    [_ (+ (first ls) (sum (rest ls)) )]))
+
+  code for zip-add
+  (define (zip-add ls1 ls2)
+  (match ls1
+  [ '() '()]
+  [ _ (cons (+ (first ls1) (first ls2)) (zip-add (rest ls1) (rest ls2)) ) ]))
+
+  code for zip-lon
+  (define (zip-lon ls1 ls2)
+  (match ls1
+  ['() '()]
+  [_ (cons (list (first ls1) (first ls2) ) (zip-lon (rest ls1) (rest ls2)) )]))
+
+  code for max-lon
+  (define (max-lon xs)
+  (match xs
+  [ '() 0]
+  [ _ (if (< (first xs) (max-lon (rest xs)) ) (max-lon (rest xs)) (first xs) )]))
+
+  code for insert-asc n xs
+  (define (insert-asc n xs)
+  (match xs
+  ['() (list n)]
+  [ _ (if (< n (first xs)) (cons n (cons (first xs) (rest xs))) (cons (first xs) (insert-asc n (rest xs)))) ]))
+
+  (cons n (cons (first xs) (rest xs)))
+
+code for min_aux
+  (define (min_aux f xs m)
+  (match xs
+  [ '() m]
+  [ _ (if (< (f m) (f (first xs))) (min_aux f (rest xs) m) (min_aux f (rest xs) (first xs) ) )]))
+
+  **issue here is that if we do min of "d" and "g", fun returns "g" and it should return "d", the first smallest
+
+  code for zip as bs
+
+  (define (zip as bs)
+  (match as
+  ['() '()]
+  [ _ (cons (list (first as) (first bs)) (zip (rest as) (rest bs) )) ]))
+
+  code for nat->peano
+  (define (nat->peano n)
+  (match n
+  [0 (Z)]
+  [_ (S (nat->peano (- n 1))) ]))
+
+  (define (peano->nat n)
+  (match n
+  [(S x) 10]
+  [Z 0]))
+
+  code for plus
+  (define (mult n1 n2)
+  (nat->peano (* (peano->nat n1) (peano->nat n2) ) ) )
+
+  code for btn-count
+  (define (btn-count bt)
+  (match bt
+  [(leaf) 0]
+  [(node n left right) (+ 1 (btn-count left) (btn-count right) ) ]))
+
+  (define (btn-contains? bt n)
+  (match bt
+  [(leaf) #f]
+  [ (node n2 left right) (or (if (= n2 n) (#t) (btn-contains? left n)) (if (= n2 n) (#t) (btn-contains? right n)))]))
+
+  (define (btn-preorder btn)
+  (match btn
+  [(leaf) '()]
+  [(node n left right) (cons n (append (btn-preorder left) (btn-preorder right)))]))
+
+  (define (expr-integers e)
+  (match e
+  [(Int i) (list i)]
+  [(Bool b) '()]
+  [(Var v) '()]
+  [(App e1 e2) (append (expr-integers e1) (expr-integers e2))]
+  [(Lam x e) (expr-integers e)]))
+
+
