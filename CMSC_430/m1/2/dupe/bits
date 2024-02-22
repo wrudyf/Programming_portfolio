@@ -1,0 +1,12 @@
+compile.rkt:24:  (seq (Mov rax (value->bits v))))
+compile.rkt:36:         (Cmp rax (value->bits #f))
+interp-prim-bits.rkt:8:    ['add1  (+ b (value->bits 1))]
+interp-prim-bits.rkt:9:    ['sub1  (- b (value->bits 1))]
+interp-prim-bits.rkt:10:    ['zero? (if (zero? b) (value->bits #t) (value->bits #f))]))
+interp-bits.rkt:12:    [(Int i)  (value->bits i)]
+interp-bits.rkt:13:    [(Bool b) (value->bits b)]
+types.rkt:25:(define (value->bits v)
+compile-ops.rkt:11:    ['add1 (Add rax (value->bits 1))]
+compile-ops.rkt:12:    ['sub1 (Sub rax (value->bits 1))]
+compile-ops.rkt:15:          (Mov rax (value->bits #f))
+compile-ops.rkt:16:          (Mov r9  (value->bits #t))

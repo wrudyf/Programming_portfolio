@@ -1,0 +1,16 @@
+<h1 id="cmsc-430-midterm-1-part-6">CMSC 430 Midterm 1, Part 6</h1>
+<h2 id="instructions">Instructions</h2>
+<p>You’ve been provided an implementation of Extort as presented in
+class.</p>
+<p>Racket 9.0 has decided to finally break with tradition and change the
+behavior of <code>if</code>. No longer will it be possible to do
+conditional evaluation using anything other than a bona fide boolean:
+<code>#t</code> or <code>#f</code>.</p>
+<p>Your job is make Extort work like the forthcoming Racket 9.0.</p>
+<p>Update <code>interp.rkt</code> and <code>compile.rkt</code> so that
+<code>if</code> works just like before when the first subexpression
+evaluates to <code>#t</code> or <code>#f</code>, but signals an error
+for any other value.</p>
+<p>Note: none of the tests have been updated to reflect the new
+behavior, so you will need to update the tests and may want to add your
+own as well.</p>

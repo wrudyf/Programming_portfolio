@@ -1,0 +1,31 @@
+(define (compile-e* es c)
+  (match es
+    ['() (seq)]
+    [(cons e es)
+     (seq (compile-e e c)
+          (Push rax)
+          (compile-e* es (cons #f c)))]))
+
+
+for let
+
+(let (...) e2)
+with let you evaluate all expressions with empty list
+
+with let*, you update the env as you go along evaluating expressions
+
+(let ((x 1)) (let ((x 2) (y x)) x))
+here, expression evaluates to 2, but what is the value of inner y? inner y evaluates to 1...
+if it were let * then y would be 2...notes to remember
+
+(define (compile-let1 x e1 e2 c)
+  (seq (compile-e e1 c)
+       (Push rax)
+       (compile-e e2 (cons x c))
+       (Add rsp 8)))
+
+our list will hold symbols...the positio of the symbol will determine where we are in the stack
+so list (x y) means x is at 8 and y is at 16...so when we cons to our environment, we cons symbola nd we don't cons the #f.....
+
+NOTE: when we compile let...we want to get ALL OF THE EXPRESSIONS Onto the stack...
+THEN WE WANT TO GET ALL OF THE ID'S INTO OUR UPDATED ENVIRONMENT..

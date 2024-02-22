@@ -1,0 +1,16 @@
+<h1 id="cmsc-430-midterm-1-part-2">CMSC 430 Midterm 1, Part 2</h1>
+<h2 id="instructions">Instructions</h2>
+<p>You’ve been provided a file <code>instr.rkt</code> that contains a
+definition of instructions <code>is</code>. Update the definition to
+solve the following problem.</p>
+<p>Consider an alternative design for encoding the values in the Dupe
+language:</p>
+<ul>
+<li>integer values are tagged with a 1 in the least significant bit</li>
+<li>boolean values are tagged with a 0 in the least significant bit</li>
+</ul>
+<p>Suppose that the <code>rax</code> register holds the encoding of an
+integer value <code>n1</code> and the <code>rbx</code> register holds
+the encoding of an integer value <code>n2</code>.</p>
+<p>Write a sequence of instructions that when executed will leave the
+encoding of <code>(- n1 n2)</code> in the <code>rax</code> register.</p>

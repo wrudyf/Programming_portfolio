@@ -1,0 +1,8 @@
+note about hustle:
+1. since every 8 byte -addressable memory address ends in 000, you can use this fact to determine what type of pointer you will store. so like if you have
+12345000...you can use the 000 to say what type of pointer it will be. you can maybe say a box pointer will be 101, so in the parsing/packaging stage, you might change 12345000 to 12345101
+and then when you compile it, you change it back to 12345000 but you know that the 101 means it will be of type box, but you change it back anyways...
+
+2. have either an immediate type or a pointer type
+
+3. projecting...put things into "heap".....dereferencing...getting values from heap
