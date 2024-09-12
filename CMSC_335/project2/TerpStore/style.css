@@ -1,0 +1,166 @@
+/* You implement */
+body{
+    font-family:arial;
+}
+.outer_box_index{
+    margin-left:auto;
+    margin-right:auto;
+    padding:0px;
+    position:relative;
+    
+}
+
+/*index page styling */
+.back_image{
+    
+    width:1600px;
+    z-index: 0;
+    position:absolute;
+    border: 10px solid green;
+    top: 0;
+    left: 0;
+}
+.page_header{
+    font-size: 75px;
+    color:azure;
+    position:absolute;
+    top:25px;
+    left:25px;
+    z-index:3;
+    background-color:rgba(0, 0, 0, .4)
+}
+
+.links_box{
+    background-color:rgb(211,211,211, 0.8);
+    display:flex;
+    flex-direction: column;
+    width:300px;
+    position: absolute;
+    top: 400px;
+    left: 650px;
+    
+    z-index: 2;
+}
+
+.links_box a{
+    text-align: center;
+    font-size:40px;
+}
+.links_box a:link{
+    color:brown;
+}
+
+.links_box a:visited{
+    color:beige;
+}
+.links_box a:hover{
+    font-size: 30px;
+}
+
+/*catalog page styling*/
+.catalog_inquiry_box{
+    background-color:rgba(255, 255, 255, 0.85);
+    border: 10px solid azure;
+    padding:10px;
+    position:absolute;
+    font-size:20px;
+    text-decoration: underline;
+    width:50%;
+    left: 50px;
+    top: 150px;
+}
+
+.catalog_inquiry_box textarea{
+    width:100%;
+    height:100px;
+}
+
+.catalog_inquiry_box button{
+    border: 5px solid black;
+    border-style:double;
+    border-radius:5px;
+    padding:10px;
+}
+
+.larger_check{
+    width:30px;
+}
+
+.dropdown{
+    width:200px;
+    border:3px solid red;
+    background-color:white;
+}
+.dropdown select{
+    display:none;
+}
+
+.range_box{
+    background-color:white;
+    border:3px solid red;
+    width: 80px;
+}
+
+.email_box{
+    background-color:white;
+    border:3px solid red;
+}
+
+/*placing order styling*/
+.placing_order_box{
+    background-color:rgba(255, 255, 255, 0.85);
+    border: 10px solid azure;
+    padding:10px;
+    position:absolute;
+    font-size:20px;
+    text-decoration: underline;
+    width:450px;
+    left: 50px;
+    top: 150px;
+}
+
+.order_boxes{
+    border:3px solid red;
+    background-color: white;
+}
+
+.placing_order_box button{
+    border: 5px solid black;
+    border-style:double;
+    border-radius:5px;
+    padding:10px;
+}
+
+
+/*footer styling*/
+
+.footer_style{
+    border: 10px solid silver;
+    border-style: inset;
+    background-color:red;
+    padding-left:100px;
+    padding-right:100px;
+    padding-top:40px;
+    padding-bottom:40px;
+    text-align:center;
+}
+
+.footer_style a:link, a:visited{
+    color:white;
+    font-size: 40px;
+}
+
+.footer_style a:hover{
+    font-size:30px;
+}
+
+.footer_container{
+    background-color:lightblue;
+    padding:10px;
+    margin-top:auto;
+    z-index:2;
+    position:absolute;
+    width:1580px;
+    top:1045px;
+    left:10px;
+}

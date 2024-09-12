@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Fetching Image</title>
+  </head>
+
+  <body>
+    <h1>Fetching Random Cat Image</h1>
+    <input type="button" value="DownloadCatImage" onclick="downloadCatImage()"><br><br>
+    <img src="toPacifyHTMLValidator" id="downloadedImage" height="300" alt="catImg"><br>
+
+    <script>
+      function downloadCatImage() {
+        let catImageUrl = `https://api.thecatapi.com/v1/images/search`;
+        fetch(catImageUrl)
+          .then(response => response.json())
+          .then(json => {
+            console.log(json); /* Take a look at the console */ 
+            const imageUrl = json[0].url;
+            const img = document.querySelector("#downloadedImage");
+            img.src = imageUrl;
+          });
+      }
+    </script>
+  </body>
+</html>

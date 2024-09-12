@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="EN">
+<head>
+    <title>Photo Viewer</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="code.js"></script>
+</head>
+<body>
+<div class="main_container">
+    <h1 class="header_styling">Photo Viewer</h1>
+    <img src="InitialImage.jpg" id="photo" class="image_styling" alt="image not available">
+    <form>
+    <fieldset>
+        <legend>Status </legend>
+        Photo Being Displayed:<input type="text" id="photo_being_displayed" disabled class="longer_text">
+        <br>
+        <div class="photo_viewer_system" id="photo_viewer_system">Photo Viewer System</div>
+    </fieldset>
+
+    <fieldset>
+        <legend>Loading Images (Local Folder) </legend>
+        Photos' Folder:<input type="text" value="umcp" id="folder"> Common Name: <input type="text" value="college" id="comname">
+        <br>    
+        Start Photo Number: <input type="text" value="2" id="start_num"> End Photo Number: <input type="text" value="4" id="end_num">
+        <br>
+        <input type="button" value="Load Photos" id="loadphotos" class="button_style">
+    </fieldset>
+    
+    <fieldset>
+        <legend>Loading Images (JSON File) </legend>
+        URL:<input type="text" value="http://www.cs.umd.edu/~nelson/classes/resources/cmsc335/images/imagesSet1.json" id="j_url" class="longer_text"> 
+        <input type="button" value="Load JSON" id="loadjson" class="button_style">
+    </fieldset>
+    
+    <fieldset>
+        <legend>Iterating </legend>
+        <input type="button" value="Previous Photo" id="previous" class="button_style">
+        <input type="button" value="Next Photo" id="next" class="button_style">
+        <input type="button" value="First Photo" id="first" class="button_style">
+        <input type="button" value="Last Photo" id="last" class="button_style">
+    </fieldset>
+    
+    <fieldset>
+        <legend>SlideShows </legend>
+        <input type="button" value="SlideShow" id="startss" class="button_style">
+        <input type="button" value="RandomSlideShow" id="startrs" class="button_style">
+        <input type="button" value="StopSlideShow" id="stopss" class="button_style">
+    </fieldset>
+    <hr>
+    <br>
+    <button type="reset" class="button_style">Reset Form Values</button>
+    </form>
+</div>
+</body>
+</html>

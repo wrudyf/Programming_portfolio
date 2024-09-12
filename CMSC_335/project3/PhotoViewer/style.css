@@ -1,0 +1,34 @@
+.main_container{
+    width:900px;
+    border:20px solid brown;
+    border-style:groove;
+    padding:15px;
+    margin-left:auto;
+    margin-right:auto
+}
+
+.header_styling{
+    color:maroon;
+    text-decoration: underline;
+}
+
+.image_styling{
+    width:600px;
+    display:block;
+    border: 10px solid black;
+    border-style:double;
+    margin-left:auto;
+    margin-right:auto
+}
+
+.photo_viewer_system{
+    color:red;
+}
+
+.button_style{
+    box-shadow: 10px 10px 20px 5px grey;
+}
+
+.longer_text {
+    width:600px;
+}

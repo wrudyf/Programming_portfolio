@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JS JSON Example</title>
+    <style>
+        h2 {text-decoration: underline}
+    </style>
+</head>
+
+<body>
+    <script>
+        "use strict";
+        main();
+
+        function main() {
+            let obj = {
+                "name": "Mary",
+                "age": 45,
+                "salary": 20000.00,
+                "employed": true,
+                "boss": null,
+                "cars": ["toyota", "honda"],  /* array example */
+                "friends": [{                 /* array of objects */
+                    "fname": "Peter"
+                }, {
+                    "fname": "Rachel"
+                }]
+            };
+            document.writeln("<h2>JSON String (After stringify Object)</h2>");
+            let str = JSON.stringify(obj);
+            document.writeln(str);
+
+            
+            document.writeln("<h2>After Parsing String</h2>")
+            let newObj = JSON.parse(str);
+            for (let prop in newObj) {
+                document.writeln(prop + "&rarr;" + newObj[prop] + "<br>");
+            }
+            
+
+            document.writeln("<h2>Check console to see object corresponding to following string</h2>");
+            /* Using template literal */
+            let secondObjStr = `{
+                "school": "UMCP",
+                "zipCode": 20742
+            }`;
+            document.writeln("String: " + secondObjStr + "<br>");
+            let secondObj = JSON.parse(secondObjStr);
+            console.log(secondObj);
+            console.table(secondObj);
+        }
+    </script>
+</body>
+
+</html>

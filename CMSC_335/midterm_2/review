@@ -1,0 +1,147 @@
+1. let [first, x, y, last] = scores
+
+2. let let {model, revolutions} = engine;
+
+3. let merged = [...names, ...ages]
+
+4. {gate: "21A",
+nonstop: true,
+duration: 1.5
+}
+
+5. let perimeter = (width = 4, length = 5) => {return width + length}
+
+6. class DataRangeError extends Error{
+    constructor(message){
+        super(message)
+    }
+}
+
+problem #2
+
+1. files.forEach(elem =>
+document.writeIn(`${elem.name} ${elem.type} <br>`)
+)
+
+2. files.filter(elem => elem.size == 100).forEach(x => document.writeIn(`${x.name} <br>`) )
+
+3. consthasAtLeastATxtFileWith40 = files.some(x =>
+        return x.type == "txt" && x.size == 40
+)
+
+4. const findMDFile = files.find(elem => type == "md" && size == 500)?.name
+
+5. const largestFile = files.reduce(result, elem=>
+
+)
+
+PROBLEM 3
+1.
+function Bed(model, weight){
+    this.model = model;
+    this.weight = weight;
+}
+
+prototype.Bed = {
+    constructor: Bed,
+
+    setModel: function(model = "BASIC") {
+    this.model = model
+    },
+
+    info() : function(){
+        return `${model} ${weight}`
+    },
+}
+
+function WaterBed(this.call, gallons){
+        this.gallons = gallons
+}
+prototype
+
+problem 4:
+
+class Door {
+    static #totalDoors = 0;
+    #make;
+    #area;
+    constructor(make, area){
+        this.#make = make
+        this.#area = area
+        Door.#totalDoors += 1
+    }
+
+    info{
+        document.writeIn(`${this.#make} ${this.area}`)
+    }
+
+    [Primitive.tostring]{
+    ...
+    }
+
+    set updateMake(){
+
+    }
+}
+
+EXAM 2 **********************************************************************************************************************
+
+1. let [first, second, x] = names;
+
+2. let {name, developed} = app;
+
+3. repairCar("XX123", ...["JCAudio", 3], "Hector")
+
+4. {
+    city: "Bethesda",
+    pop: 6500,
+    train: true
+}
+
+5. let process = (a, b = 5) => {let prod = a * b;
+let sum = a + b;
+document.writeIn(`${prod}`)
+console.log(`${sum}`)
+}
+
+6.
+class DataRangeError extends Error{
+    constructor(message){
+    super(message)
+    }
+}
+
+PROBLEM #2
+1. projects.forEach(elem => document.writeIn(`${elem.name} ${elem.languages}<br>`))
+
+2. projects.filter(elem => elem.lines < 200).forEach(x => document.writeIn(`${x.language}`) )
+
+3. const hasAtLeastAJavaProjectWith100 = projects.some(elem => elem.language == "Java" && elem.)
+
+4. const findProject = projects.find(elem => elem.language == "PHP" && elem.lines == 500)?.name
+
+PROBLEM #3
+function Photo(date, description){
+    this.date = date;
+    this.description = description;
+}
+
+Photo.prototype{
+    constructor: Photo(),
+    setDate: function(date){
+        if (name == NULL){
+            this.date = "NONE"
+        } else{
+        this.date = name}
+    }
+    details: function(){
+        return `${date}, ${description}`
+    }
+}
+
+function DigitalPhoto(date, description, bytes){
+    Photo(this, date, description)
+    this.bytes = bytes;
+}
+
+DigitalPhoto = new Photo()

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Application</title>
+        <script>
+            "use strict";
+            window.onload = main;
+            function main(){
+                //window.alert("testing inside main")
+            }
+
+            function validate(){
+                let x = window.confirm("Are you sure you want to submit your application? \n You willnot be able to change your information once submitted.")
+                return x;
+            }
+            window.onsubmit = validate;
+
+        </script>
+    </head>
+    <h1>Application</h1>
+    
+    <form action="../processApplication" method="POST">
+        <fieldset>
+            Name: <input type="text" id="name" name="name">
+            Email Address: <input type="email" id="email" name="email">
+            <br><br>
+            GPA: <input type="text" id="gpa" name="gpa">
+            <br><br>
+            Background information: <br>
+            <textarea id="background_info" rows="4" cols="50" name="background_info">
+            </textarea>
+        </fieldset>
+        <br>
+        <button type="reset">Reset</button>
+        <button type="submit" id="submit">Submit Application</button>
+    </form>
+    <hr>
+    <a href="../">HOME</a>
+</html>

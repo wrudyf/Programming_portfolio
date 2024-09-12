@@ -1,0 +1,22 @@
+{
+  "name": "final_project",
+  "version": "1.0.0",
+  "description": "final project for 335",
+  "main": "billboard.js",
+  "scripts": {
+    "test": "none"
+  },
+  "keywords": [
+    "none"
+  ],
+  "author": "rudy f",
+  "license": "ISC", 
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "mongodb": "^4.5.0",
+    "nodemon": "^3.0.1",
+    "node-fetch": "^2.6.9"
+  }
+}

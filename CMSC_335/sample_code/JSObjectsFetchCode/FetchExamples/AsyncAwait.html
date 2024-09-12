@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Example</title>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <script>
+        
+        process();
+
+        async function process() {
+            let url = "https://jsonplaceholder.typicode.com/todos/1"; // notice the 1 at the end
+            alert(`Retrieving data from ${url} (check console for results)`);
+        
+            const result = await fetch(url);
+            const json = await result.json();
+            console.log(json);
+            console.log("***** END OF SCRIPT *****"); // check WHERE this message appears in the console
+        }
+    </script>
+</body>
+
+</html>

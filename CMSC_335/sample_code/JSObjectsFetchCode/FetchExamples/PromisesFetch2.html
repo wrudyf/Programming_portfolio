@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Example</title>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <script>
+        
+        let url = "https://jsonplaceholder.typicode.com/todos/1"; // notice the 1 at the end
+        alert(`Retrieving data from ${url}`);
+        
+        fetch(url) // get data
+            .then(response => response.text()) // process response by retrieving text 
+            .then(text => document.writeln(text));  // displaying text
+    </script>
+</body>
+
+</html>

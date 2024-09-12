@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Example</title>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <script>
+        
+        let url = "https://jsonplaceholder.typicode.com/todos/1"; // notice the 1 at the end
+        alert(`Retrieving data from ${url} (check console for results)`);
+        
+        fetch(url)
+            .then(response => response.json())
+            .then(json => processObject(json))
+            .catch(error => console.log("Reporting error: " + error));
+       
+        function processObject(json) {
+            console.log("Data Retrieved\n");
+            console.log(json);
+            console.log("Accessing properties\n")
+            console.log(`user Id: ${json.userId}`);
+            throw "Faking an error took place";     // faking an error; will trigger catch above
+            console.log(`id: ${json.id}`);
+            console.log(`title: ${json.title}`);            
+        }
+    </script>
+</body>
+
+</html>

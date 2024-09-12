@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Example</title>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <script>
+        let url = "https://jsonplaceholder.typicode.com/todos/"; // Now retrieving a lot of entries
+        alert(`Retrieving data from ${url} (check console for results)`);
+        
+        fetch(url)
+            .then(response => response.json())
+            .then(arrayOfObjects => printTitles(arrayOfObjects))
+            .catch(error => console.log("Reporting error: " + error));
+       
+        function printTitles(arrayOfObjects) {
+            // Our response is an array of values
+            console.log("\n\n***** Titles Received *****\n");
+            for (let entry of arrayOfObjects) {
+                console.log(entry.title);
+            }
+        }
+    </script>
+</body>
+
+</html>

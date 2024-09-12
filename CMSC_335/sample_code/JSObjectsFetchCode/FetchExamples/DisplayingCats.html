@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Displaying cats</title>
+  </head>
+
+  <body>
+    <h1>Cat Images</h1>
+   
+    <label>Animation speed in milliseconds <input id="speed" type="text" value="1000"></label><br><br>
+    <input type="button" value="Start Displaying Cats" onclick="startAnimation()">
+    <input type="button" value="Stop Animation" onclick="stopAnimation()"><br><br>
+    <img id="downloadedImage" src="doesnotexistyet.png" height="300" alt="image"><br>
+    <div id="display"></div>
+
+    <script>
+      let animationId, animationStarted = false;
+
+      function downloadCatImage() {
+        let catImagesUrl = `https://api.thecatapi.com/v1/images/search`;
+        fetch(catImagesUrl)
+          .then(response => response.json())
+          .then(json => {
+            const imageUrl = json[0].url;
+            const img = document.querySelector("#downloadedImage");
+            img.src = imageUrl;
+            document.querySelector("#display").innerHTML = `Source: <a href="${imageUrl}">${imageUrl}</a>`;
+          });
+      }
+
+      function startAnimation() {
+        if (!animationStarted) { // preventing execuiting setInterval multiple times before stopping animation
+          let intervalInMillisecs = document.querySelector("#speed").value;
+          animationId = setInterval("downloadCatImage()", intervalInMillisecs);
+          animationStarted = true;
+        }
+      }
+
+      function stopAnimation() {
+        if (animationStarted) {
+          clearInterval(animationId);
+          animationStarted = false;
+        }
+      }
+    </script>
+  </body>
+</html>

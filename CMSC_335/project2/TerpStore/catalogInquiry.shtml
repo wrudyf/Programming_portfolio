@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="EN">
+    <head>
+        <title>Catalog Inquiry</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css"> 
+    </head>
+    <body>
+        <div class="outer_box_index">
+            <img src="images/JimHenson.jpg" class="back_image" alt="images/JimHenson">
+            
+            <span class="page_header"><u>Catalog Inquiry</u></span>
+            <form action="http://npp.cs.umd.edu/cmsc335/projects/TerpStore/catalogInquiry.php" method="GET" class="catalog_inquiry_box">
+                    
+                <label for="item-q">Item Category
+                <select id="item-q" name="item-choice" autofocus class="dropdown">
+                    
+                    <option value="clothes">clothes</option>
+                    <option value="books">books</option>
+                    <option value="books">music</option>
+                    <option value="food">food</option>
+                    <option value="other">other</option>
+                </select></label>
+                <br><br>
+                <label for="cost-range">Maximum Cost ($)
+                <input id="cost-range" type="number" min="0" max="1000" step="5" value="1" name="maximumCost" class="range_box"></label>
+                <br><br>
+                <label><input type="checkbox" class="larger_check" name="availableOnCampus">Available on Campus</label>
+                <br><br>
+                <label><input type="checkbox" class="larger_check" checked name="availableOnline">Available Online</label>
+                <br><br>
+                <label for="additional_info">Additional Information</label> 
+                <br>
+                <textarea id="additional_info" name="info"></textarea>       
+                <br><br>
+                <label>Contact Email Address: <input type="text" size="30" placeholder="example@terpmail.umd.edu" class="email_box" name="email"></label>
+                <br><br>
+                <button type="submit">Submit Inquiry</button>
+                <button type="reset">Clear</button>
+            </form>
+            
+            
+            <div class="footer_container">
+            <!--#include virtual="footer.shtml"-->
+            </div>
+        </div>
+    </body>
+</html>

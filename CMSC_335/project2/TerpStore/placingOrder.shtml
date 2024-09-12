@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="EN">
+    <head>
+        <title>Placing Order</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css"> 
+    </head>
+    <body>
+        <div class="outer_box_index">
+            <img src="images/JimHenson.jpg" class="back_image" alt="images/JimHenson">
+            
+            <span class="page_header"><u>Placing Order</u></span>
+            <form action="processing/placingOrder.php" method="POST" class="placing_order_box">
+                <label>Item Serial#: 
+                    <input type="text" placeholder="umd-item-0000" name="serialNumber" class="order_boxes" autofocus>
+                </label>   
+                <br><br>
+                <label>Credit card #: <input type="text" maxlength="4" size="4" name="cc1" class="order_boxes" required></label>
+                <label>- <input type="text" maxlength="4" size="4" name="cc2" class="order_boxes" required></label>
+                <label>- <input type="text" maxlength="4" size="4" name="cc3" class="order_boxes" required></label>
+                <label>- <input type="text" maxlength="4" size="4" name="cc4" class="order_boxes" required></label>
+                <br><br>
+                <label>Shipping Address:
+                    <input type="text" name="shipping" class="order_boxes">
+                </label>
+                <br><br>
+                <label>Contact Email Address:
+                    <input type="text" name="email" class="order_boxes">
+                </label>
+                <br><br>
+                <button type="submit">Submit Order</button>
+                <button type="reset">Clear</button>
+                
+            </form>
+            
+            
+            <div class="footer_container">
+            <!--#include virtual="footer.shtml"-->
+            </div>
+        </div>
+    </body>
+</html>

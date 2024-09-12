@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>JS Destructuring Example</title>
+</head>
+
+<body>
+	<script>
+		"use strict";
+
+		main();
+
+		function main() {
+			/* Destructuring arrays */
+			let names = ["Andrew", "Karl", "Olivia"];
+			let [first, second] = names;
+            document.writeln("Original Array: " + names + "<br>");
+			document.writeln("First: " + first + "<br>" + "Second: " + second + "<br><br>");
+
+            document.writeln("***** Destructuring Object *****<br>");
+			/* Destructuring object */
+			let app = {
+				name: "mapApp",
+				developed: 1986,
+				location: "CP"
+			};
+			/* You must use the same property name; try name2 instead of name
+			   You don't need to retrieve all properties (convenient for objects 
+			   with several properties)
+			 */
+			let {
+				name,
+				developed
+			} = app; /* Notice using { } */
+			document.writeln("Name: " + name + ", " + "Developed: " + developed + "<br><br>");
+
+            document.writeln("***** Destructuring Object in Function Call *****<br>");
+			myFunc(app); /* function call */
+			function myFunc({developed}){
+				document.writeln("In Function: developed: " + developed + "<br><br>");
+			}
+
+            document.writeln("***** Destructuring Object in Function Call *****<br>");
+            /* function call */
+			myFunc2(app);
+			
+			/* Using a property name different than original */
+			function myFunc2({name: yourName}){
+				document.writeln("YourName: " + yourName + "<br><br>");
+			}
+
+            document.writeln("***** Swapping Values *****<br>");
+			/* swap */
+			let a = 100,
+				b = 200;
+			[b, a] = [a, b];
+			document.writeln(a + ", " + b + "<br>");
+		}
+	</script>
+</body>
+
+</html>

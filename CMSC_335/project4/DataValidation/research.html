@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Form validation page</title>
+        <link rel="stylesheet" href="research.css">
+        <script src="checker.js"></script>
+    </head>
+    
+    <body>
+        <h1>Research Form</h1>
+        <form id="f" action="researchProcessing.php" method="get">
+            <fieldset>
+                <legend>General Information</legend>
+                Firstname: <input type="text" id="firstname" name="firstname" required> 
+                Lastname: <input type="text" id="lastname" name="lastname" required><br><br>
+                Phone: 
+                <input type="text" maxlength="3" size="3" id="phone1" name="phoneFirstPart" required> - 
+                <input type="text" maxlength="3" size="3" id="phone2" name="phoneSecondPart" required> - 
+                <input type="text" maxlength="4" size="4" id="phone3" name="phoneThirdPart" required>
+                Email: <input type="email" id="email" name="email">
+            </fieldset>
+
+            <fieldset>
+                <legend>Research Study Data</legend>
+                <fieldset>
+                    <legend>Age/Height/Weight</legend>
+                    <b>Age:</b> <input type="number" id="age" min="1" max="125" name="age" > 
+                    <b>Height: </b>
+                    <input type="number" id="feet" min="2" max="7" name="heightFeet" > <em>Feet </em>
+                    <input type="number" id="inches" min="0" max="11" name="heightInches" > <em>Inches</em>
+                    <b>&#9;Weight: </b>
+                    <input type="number" id="pounds" min="1" max="600" name="weight" > <em>Pounds</em>
+                </fieldset>
+                <br>
+                <fieldset>
+                    <legend>Conditions</legend>
+                    Which of the following conditions are present in your family? (Check all that apply)<br>
+                    <input type="checkbox" id="high_blood_pressure" name="highBloodPressure" value="highBloodPressure" unchecked>
+                    <label for="high_blood_pressure">High Blood Pressure</label>
+                    
+                    <input type="checkbox" id="diabetes" name="diabetes" value="diabetes" unchecked>
+                    <label for="diabetes">Diabetes</label>
+                    
+                    <input type="checkbox" id="glaucoma" name="glaucoma" value="glaucoma" unchecked>
+                    <label for="glaucoma">Glaucoma</label>
+                    
+                    <input type="checkbox" id="asthma" name="asthma" value="asthma" unchecked>
+                    <label for="asthma">Asthma</label>
+                    
+                    <input type="checkbox" id="no_conditions" name="none" value="none" unchecked>
+                    <label for="no_condition">None</label>
+                </fieldset>
+                <br>
+                <fieldset>
+                    <legend>Time Period</legend>
+                    How long have you experienced any of the above conditions?<br>
+                    <input type="radio" id="never" name="period" value="Never"><label for="never">Never</label>
+                    <input type="radio" id="less1year" name="period" value="Less than a year"><label for="less1year">Less than a year</label>
+                    <input type="radio" id="1to2years" name="period" value="One to two years"><label for="1to2years">One to two years</label>
+                    <input type="radio" id="morethan2" name="period" value="More than two years"><label for="morethan2">More than two years</label>
+                </fieldset>
+                <br>
+                <fieldset>
+                    <legend>Study Information</legend>
+                    Which study are you taking part of? 
+                    <select id="study_time" name="studyType">
+                        <option value="Long_term">Long Term</option>
+                        <option value="short_term">Short Term</option>
+                    </select> 
+                    
+                    Assigned Study Id:
+                    <input type="text" maxlength="4" size="4" id="study_id_1" name="firstFourDigits" placeholder="A777" required> --
+                    <input type="text" maxlength="4" size="4" id="study_id_2" name="secondFourDigits" placeholder="B888" required>
+                </fieldset>
+                <br>
+                <fieldset>
+                    <legend>Additional Information (Comments)</legend>
+                    <textarea id="comments" name="comments"></textarea>
+                </fieldset>
+            </fieldset>
+            <br>
+            <fieldset>
+                <button type="reset">Clear Form</button>
+                <button type="submit" id="submit">Submit Information</button>
+            </fieldset>
+        </form>
+        
+        <br>
+        
+        <div class="footer">CMSC Research Institute &#174;</div>
+        
+    </body>
+</html>

@@ -1,0 +1,67 @@
+@font-face{
+    font-family: Roboto;
+    src: url(Roboto.ttf)
+}
+body{
+    margin: 0px;
+    font-size: 16pt;
+    font-family:Roboto;
+    background-image:url(background_image.png)
+    
+}
+.container{
+    width: 720px;
+    border-left: 10px;
+    border-right: 10px;
+    border-top: 0px;
+    border-bottom: 0px;
+    padding: 10px;
+    background-color:#e5e7ebe3;
+    border-color: red;
+    border-style:double;
+    margin-left:auto;
+    margin-right:auto
+
+}
+
+.table_container{
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#suggestions table{
+    border-collapse: collapse;
+    width: 650px;
+    margin-left:auto;
+    margin-right:auto
+}
+#suggestions thead tr td{
+    
+    width:650px;
+    text-align: center;
+    padding:10px;
+    border-collapse: collapse;
+}
+
+#suggestions tbody #titles td{
+    text-align: center;
+    border: 5px solid #4c89da;
+    background-color:#fff;
+    border-collapse:collapse
+}
+
+#suggestions tbody tr:nth-child(even){
+    background-color:#e4ec94b9;
+    text-align:center;
+    padding:5px;
+
+}
+#suggestions tbody tr:nth-child(odd){
+    background-color: #babfc5;
+    text-align:center;
+    padding:5px;
+}
+
+#youtube{
+    width:600px;
+}

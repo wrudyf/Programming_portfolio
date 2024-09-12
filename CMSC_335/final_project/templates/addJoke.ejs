@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Add dad jokes</title>
+        <link rel="stylesheet" href="public/styles.css">
+    </head>
+    <body>
+        <div class="container">
+            <nav>
+                <a href="/">Home</a>
+                <a href="/addJoke">Add joke</a>
+            </nav>
+            <h1>Joke to add</h1>
+            <p>Fill out the form below to add your joke to the 
+                billboard of dad jokes
+            </p>
+            <p>
+                By the way, a suggestion for a joke is
+            </p>
+            <p>
+                <%- joke_suggestion%>
+            </p>
+            <form action="../process" method="post">
+                <fieldset>
+                    <textarea name="joke" cols="100" rows="25"></textarea><br>
+                        <button type="submit">Submit</button>
+                </fieldset>
+            </form>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="EN">
+    <head>
+        <title>Terp Store</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css"> 
+    </head>
+    <body>
+        <div class="outer_box_index">
+            <img src="images/JimHenson.jpg" class="back_image">
+            
+            <span class="page_header"><u>Terp Store</u></span>
+            
+            <span class="links_box">
+                <a href="catalogInquiry.shtml">Catalog Inquiry</a><br>
+                <a href="placingOrder.shtml">Placing Order</a>
+            </span>
+            
+            
+            <div class="footer_container">
+            <!--#include virtual="footer.shtml"-->
+            </div>
+        </div>
+    </body>
+</html>
